@@ -3,17 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>6</title>
+    <title>8</title>
 </head>
 <body>
     <script>
-        function fact(n){
-    if(n<=1){
-        return 1;
+    function missingNumber(n, arr) {
+    let sum = 0;
+    for (let i = 0; i < n - 1; i++) {
+        sum += arr[i];
+    }
+    const expectedSum = (n * (n + 1)) / 2;
+    return expectedSum - sum;
 }
-return n*fact(n-1);
-}
-document.write("The factorial of 5 is "+fact(5));
+const arr = [1, 2, 3, 5];
+const n = 5;
+const ans=missingNumber(n, arr)
+console.log("The missing number in the given array is "+ans);
     </script>
 </body>
 </html>
